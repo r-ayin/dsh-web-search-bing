@@ -1,0 +1,47 @@
+{
+  "name": "dsh-web-search-bing",
+  "version": "0.0.1",
+  "description": "Keyless Bing HTML search provider plus a relay-aware fetch provider with per-hop redirect validation for the dsh web seam.",
+  "private": true,
+  "type": "module",
+  "main": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-llm": ">=0.0.1-rc <2",
+    "@deepseek-ai/dsh-tools": ">=0.0.1-rc <2",
+    "cordis": ">=4.0.0-rc <5",
+    "schemastery": "^3.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "^5.9.0"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "author": "r-ayin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r-ayin/dsh-web-search-bing.git"
+  },
+  "homepage": "https://github.com/r-ayin/dsh-web-search-bing#readme",
+  "bugs": {
+    "url": "https://github.com/r-ayin/dsh-web-search-bing/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
